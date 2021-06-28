@@ -1,9 +1,9 @@
 <ul class="sidebar-menu" data-widget="tree">
     <li class="header">MAIN NAVIGATION</li>
-    <li><a href="/"><i class="fa fa-home"></i> <span>Home</span></a></li>
+    <li><a href="/"><i class="fa fa-home"></i> <span>HOME</span></a></li>
     <li class="treeview">
           <a href="#">
-            <i class="fa fa-table"></i> <span>Tables</span>
+            <i class="fa fa-table"></i> <span>TABLES</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -15,7 +15,7 @@
         </li>
     <li class="treeview">
           <a href="#">
-            <i class="fa fa-edit"></i> <span>Forms</span>
+            <i class="fa fa-edit"></i> <span>FORMS</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
