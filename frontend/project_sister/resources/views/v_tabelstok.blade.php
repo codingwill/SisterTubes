@@ -31,7 +31,7 @@
                 <td>...</td>
                 <td>...</td>
                 <td>...</td>
-                <td>/detail</td>
+                <td><button type="button" class="btn btn-block btn-info btn-sm">Detail</button></td>
               </tr>
             </tbody>
             <tfoot>
