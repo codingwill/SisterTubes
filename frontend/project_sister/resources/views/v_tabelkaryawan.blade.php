@@ -1,15 +1,15 @@
 @extends('layout.v_template')
-@section('title','Tabel Stock')
+@section('title','Tabel Karyawan')
 
 
 @section('content')
-<h1>Ini Halaman Tabel Order Stok</h1>
+<h1>Ini Halaman Tabel Karyawan</h1>
 <section class="content">
   <div class="row">
     <div class="col-xs-12">
       <div class="box">
         <div class="box-header">
-          <h3 class="box-title">Tabel Order Stock</h3>
+          <h3 class="box-title">Tabel Karyawan</h3>
         </div>
         <!-- /.box-header -->
         <div class="box-body">
@@ -17,11 +17,13 @@
             <thead>
               <tr>
                 <th>No</th>
-                <th>Karyawan</th>
-                <th>Admin</th>
-                <th>Produk</th>
+                <th>KTP (Karyawan)</th>
+                <th>KTP (Admin)</th>
+                <th>ID Produk</th>
                 <th>Tanggal</th>
-                <th>Aksi</th>
+                <th>Keterangan</th>
+                <th>Jumlah</th>
+                <th>Harga</th>
               </tr>
             </thead>
             <tbody>
@@ -31,17 +33,21 @@
                 <td>...</td>
                 <td>...</td>
                 <td>...</td>
-                <td>/detail</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
               </tr>
             </tbody>
             <tfoot>
               <tr>
                 <th>No</th>
-                <th>Karyawan</th>
-                <th>Admin</th>
-                <th>Produk</th>
+                <th>KTP (Karyawan)</th>
+                <th>KTP (Admin)</th>
+                <th>ID Produk</th>
                 <th>Tanggal</th>
-                <th>Aksi</th>
+                <th>Keterangan</th>
+                <th>Jumlah</th>
+                <th>Harga</th>
               </tr>
             </tfoot>
           </table>
