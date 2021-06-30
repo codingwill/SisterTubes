@@ -3,7 +3,7 @@
 
 
 @section('content')
-<h1>Ini Halaman Tabel Stok</h1>
+<h1>Ini Halaman Tabel Order Stok</h1>
 <section class="content">
       <div class="row">
         <div class="col-md-6">

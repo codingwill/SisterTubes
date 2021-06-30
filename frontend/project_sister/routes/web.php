@@ -21,4 +21,11 @@ route::view('/FormProduk', 'v_formproduk');
 route::view('/FormStok', 'v_formstok');
 route::view('/TabelProduk', 'v_tabelproduk');
 route::view('/TabelStok', 'v_tabelstok');
+<<<<<<< Updated upstream
+=======
+route::view('/TabelDetailStok', 'v_tabeldetailstok');
+route::view('/TabelManajer', 'v_tabelmanajer');
+route::view('/TabelKaryawan', 'v_tabelkaryawan');
+route::view('/TabelCabang', 'v_tabelcabang');
+>>>>>>> Stashed changes
 route::view('/Stok', 'v_tabelstok');
