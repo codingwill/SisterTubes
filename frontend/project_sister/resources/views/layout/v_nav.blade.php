@@ -11,6 +11,9 @@
     <ul class="treeview-menu">
       <li><a href="/TabelStok"><i class="fa fa-circle-o"></i> Tabel Stock</a></li>
       <li><a href="/TabelProduk"><i class="fa fa-circle-o"></i> Tabel Produk</a></li>
+      <li><a href="/TabelManajer"><i class="fa fa-circle-o"></i> Tabel Manajer</a></li>
+      <li><a href="/TabelKaryawan"><i class="fa fa-circle-o"></i> Tabel Karyawan</a></li>
+      <li><a href="/TabelCabang"><i class="fa fa-circle-o"></i> Tabel Cabang</a></li>
     </ul>
   </li>
   <li class="treeview">

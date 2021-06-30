@@ -890,5 +890,5 @@
         <!-- /.col -->
       </div>
       <!-- /.row -->
-    </section>
+</section>
 @endsection
