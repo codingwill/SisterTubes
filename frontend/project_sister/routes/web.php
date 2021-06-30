@@ -26,3 +26,11 @@ route::view('/TabelManajer', 'v_tabelmanajer');
 route::view('/TabelKaryawan', 'v_tabelkaryawan');
 route::view('/TabelCabang', 'v_tabelcabang');
 route::view('/Stok', 'v_tabelstok');
+
+
+route::view('/cabang','form/vf_cabang');
+route::view('/karyawan','form/vf_karyawan');
+route::view('/manajer','form/vf_manajer');
+route::view('/order','form/vf_order');
+route::view('/orderstok','form/vf_orderstok');
+route::view('/produk','form/vf_produk');
