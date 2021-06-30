@@ -3,13 +3,13 @@
 
 
 @section('content')
-<h1>Ini Halaman Tabel Order Stok</h1>
+<h1>Ini Halaman Tabel Detail Order Stok</h1>
 <section class="content">
   <div class="row">
     <div class="col-xs-12">
       <div class="box">
         <div class="box-header">
-          <h3 class="box-title">Tabel Order Stock</h3>
+          <h3 class="box-title">Tabel Detail Order Stock</h3>
         </div>
         <!-- /.box-header -->
         <div class="box-body">
@@ -21,7 +21,9 @@
                 <th>Admin</th>
                 <th>Produk</th>
                 <th>Tanggal</th>
-                <th>Aksi</th>
+                <th>Keterangan</th>
+                <th>Jumlah</th>
+                <th>Harga</th>
               </tr>
             </thead>
             <tbody>
@@ -31,7 +33,9 @@
                 <td>...</td>
                 <td>...</td>
                 <td>...</td>
-                <td>/detail</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
               </tr>
             </tbody>
             <tfoot>
@@ -41,7 +45,9 @@
                 <th>Admin</th>
                 <th>Produk</th>
                 <th>Tanggal</th>
-                <th>Aksi</th>
+                <th>Keterangan</th>
+                <th>Jumlah</th>
+                <th>Harga</th>
               </tr>
             </tfoot>
           </table>

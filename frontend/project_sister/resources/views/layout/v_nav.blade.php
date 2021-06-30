@@ -9,7 +9,8 @@
       </span>
     </a>
     <ul class="treeview-menu">
-      <li><a href="/TabelStok"><i class="fa fa-circle-o"></i> Tabel Stock</a></li>
+      <li><a href="/TabelStok"><i class="fa fa-circle-o"></i> Tabel Order Stock</a></li>
+      <li><a href="/TabelDetailStok"><i class="fa fa-circle-o"></i> Tabel Detail Order Stock</a></li>
       <li><a href="/TabelProduk"><i class="fa fa-circle-o"></i> Tabel Produk</a></li>
       <li><a href="/TabelManajer"><i class="fa fa-circle-o"></i> Tabel Manajer</a></li>
       <li><a href="/TabelKaryawan"><i class="fa fa-circle-o"></i> Tabel Karyawan</a></li>
