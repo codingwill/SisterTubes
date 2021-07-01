@@ -41,7 +41,7 @@
          @csrf
 
         <div class="form-group has-feedback">
-            <input type="user_id" name="user_id" class="form-control" placeholder="ID User">
+            <input type="username" name="username" class="form-control" placeholder="Username">
             <span class="glyphicon glyphicon-user form-control-feedback"></span>
             @error('email') <!--matching name not found-->
                 <span class="invalid-feedback" role="alert">
