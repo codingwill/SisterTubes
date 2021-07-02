@@ -13,24 +13,71 @@
             <div class="box-header with-border">
               <h3 class="box-title">Manajer Form</h3>
             </div>
+            @if($alert != null)
+              <div class="alert alert-danger">
+                <h3>Gagal menambahkan manajer baru!</h3>
+                <hr>
+                <ul>
+                  @if ($alert != null && $alert['username'])
+                    <li>Username sudah dipakai pengguna lain</li>
+                  @endif
+                  @if ($alert != null && $alert['email'])
+                    <li>Email sudah dipakai pengguna lain</li>
+                  @endif
+                </ul>
+              </div>
+            @endif
 
-            <form role="form">
+            <form role="form" method="post" action="/manajer/tambah">
+              @csrf
               <div class="box-body">
                 <div class="form-group">
-                  <label for="exampleInputIdUser">ID User</label>
-                  <input type="text" class="form-control" id="exampleInputIdUser" placeholder="Enter ID User">
+                  <label for="exampleInputIdUser">KTP</label>
+                  <input name="ktp" value="{{ old('ktp') }}" type="text" class="form-control @error('ktp') is-invalid @enderror" id="exampleInputIdUser" placeholder="Enter KTP">
+                  
+                  @error('ktp')
+                      <div class="alert alert-danger">{{ $message }}</div>
+                  @enderror
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputIdUser">Username</label>
+                  <input name="username" value="{{ old('username') }}" type="text" class="form-control" id="exampleInputIdUser" placeholder="Enter Username">
+
+                  @error('username')
+                      <div class="alert alert-danger">{{ $message }}</div>
+                  @enderror
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputIdUser">Email</label>
+                  <input name="email" value="{{ old('email') }}" type="email" class="form-control @error('email') is-invalie @enderror" id="exampleInputIdUser" placeholder="Enter Email">
+
+                  @error('email')
+                      <div class="alert alert-danger">{{ $message }}</div>
+                  @enderror
                 </div>
                 <div class="form-group">
                   <label for="exampleInputNama">Nama </label>
-                  <input type="text" class="form-control" id="exampleInputNama" placeholder="Nama">
+                  <input name="nama" value="{{ old('nama') }}" type="text" class="form-control @error('nama') is-invalie @enderror" id="exampleInputNama" placeholder="Nama">
+                  
+                  @error('nama')
+                      <div class="alert alert-danger">{{ $message }}</div>
+                  @enderror
                 </div> 
                 <div class="form-group">
                   <label for="exampleInputTelp">No. Telp </label>
-                  <input type="text" class="form-control" id="exampleInputTelp" placeholder="No. Telp">
+                  <input name="telp" value="{{ old('telp') }}" type="text" class="form-control @error('telp') is-invalie @enderror" id="exampleInputTelp" placeholder="No. Telp">
+                  
+                  @error('telp')
+                      <div class="alert alert-danger">{{ $message }}</div>
+                  @enderror
                 </div>
                 <div class="form-group">
                   <label for="exampleInputAlamat">Alamat</label>
-                  <input type="text" class="form-control" id="exampleInputAlamat" placeholder="Alamat">
+                  <input name="alamat" value="{{ old('alamat') }}" type="text" class="form-control @error('alamat') is-invalie @enderror" id="exampleInputAlamat" placeholder="Alamat">
+                  
+                  @error('alamat')
+                      <div class="alert alert-danger">{{ $message }}</div>
+                  @enderror
                 </div>
               </div>
 

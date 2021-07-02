@@ -15,25 +15,32 @@
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form role="form">
+            <form role="form" method="post" action="/cabang/tambah">
+              @csrf
               <div class="box-body">
+                @foreach ($textForm as $field)
+                  <div class="form-group">
+                    <label for="{{ $field['name'] }}">{{ $field['title'] }}</label>
+                    <input name="{{ $field['name'] }}" value="{{ old($field['name']) }}" type="text" class="form-control @error($field['name']) is-invalid @enderror" id="{{ $field['name'] }}" placeholder="{{ $field['placeholder'] }}">
+                    
+                    @error($field['name'])
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+                  </div>
+                @endforeach
                 <div class="form-group">
-                  <label for="exampleInputMan-Ktp">Manajer - KTP</label>
-                  <input type="text" class="form-control" id="exampleInputManKtp" placeholder="Manajer - ktp">
+                  <label>Manajer</label>
+                    <select name="manajer" class="form-control select2 @error('manajer') is-invalid @enderror" style="width: 100%;">
+                        <option value='' selected="selected" disabled></option>
+                        @foreach ($manajer as $row)
+                          <option value={{ $row->ktp }}>{{ $row->nama }} - {{ $row->ktp }}</option>
+                        @endforeach
+                    </select>
+                    @error('manajer')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
                 </div>
-                <div class="form-group">
-                  <label for="exampleInputNamaCabang">Nama Cabang</label>
-                  <input type="text" class="form-control" id="exampleInputNamaCabang" placeholder="Nama cabang">
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputTelp">No. Telp </label>
-                  <input type="text" class="form-control" id="exampleInputTelp" placeholder="No. Telp">
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputAlamat">Alamat</label>
-                  <input type="text" class="form-control" id="exampleInputAlamat" placeholder="Alamat">
-                </div>
-
+              </div>
               <div class="box-footer">
                 <button type="submit" class="btn btn-primary">Submit</button>
               </div>

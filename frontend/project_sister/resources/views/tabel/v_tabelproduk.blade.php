@@ -5,6 +5,15 @@
 @section('content')
 <h1>Ini Halaman Tabel Produk</h1>
 <section class="content">
+  @if ($inputSuccess == 'success')
+    <div class="alert alert-success" role="alert">
+      <strong>Data berhasil dimasukkan!</strong>
+    </div>
+  @elseif ($inputSuccess == 'failed')
+    <div class="alert alert-success" role="alert">
+      <strong>Data gagal dimasukkan!</strong>
+    </div>
+  @endif
       <div class="row">
         <div class="col-xs-12">
           <div class="box">
@@ -17,26 +26,37 @@
                 <thead>
                 <tr>
                   <th>No</th>
-                  <th>ID Kategori</th>
+                  <th>Kategori</th>
                   <th>Nama Produk</th>
-                  <th>Stock</th>
+                  <th>Stok</th>
                   <th>Harga</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
+                  @foreach($rows as $row)
+                    <tr>
+                      <a href="produk"><td>{{ $loop->index + 1 }}</td></a>
+                      <td>{{ $row->kategoriNama }}</td>
+                      <td>{{ $row->nama }}</td>
+                      <td>{{ $row->stok }} </td>
+                      <td>Rp {{ number_format($row->harga, 2, ',', '.') }}</td>
+                    </tr>
+                  @endforeach
+                <!--
+                  <tr>
                   <td>...</td>
                   <td>...</td>
                   <td>...</td>
                   <td>...</td>
                   <td>...</td>
                 </tr>
+                -->
                 <tfoot>
                 <tr>
                   <th>No</th>
-                  <th>ID Kategori</th>
+                  <th>Kategori</th>
                   <th>Nama Produk</th>
-                  <th>Stock</th>
+                  <th>Stok</th>
                   <th>Harga</th>
                 </tr>
                 </tfoot>

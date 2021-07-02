@@ -11,10 +11,11 @@
     <ul class="treeview-menu">
       <li><a href="/TabelStok"><i class="fa fa-circle-o"></i> Tabel Order Stock</a></li>
       <li><a href="/TabelDetailStok"><i class="fa fa-circle-o"></i> Tabel Detail Order Stock</a></li>
-      <li><a href="/TabelProduk"><i class="fa fa-circle-o"></i> Tabel Produk</a></li>
-      <li><a href="/TabelManajer"><i class="fa fa-circle-o"></i> Tabel Manajer</a></li>
+      <li><a href="/produk"><i class="fa fa-circle-o"></i> Tabel Produk</a></li>
+      <li><a href="/kategori"><i class="fa fa-circle-o"></i> Tabel Kategori</a></li>
+      <li><a href="/manajer"><i class="fa fa-circle-o"></i> Tabel Manajer</a></li>
       <li><a href="/TabelKaryawan"><i class="fa fa-circle-o"></i> Tabel Karyawan</a></li>
-      <li><a href="/TabelCabang"><i class="fa fa-circle-o"></i> Tabel Cabang</a></li>
+      <li><a href="/cabang"><i class="fa fa-circle-o"></i> Tabel Cabang</a></li>
     </ul>
   </li>
  <li class="treeview">
@@ -25,10 +26,11 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="/cabang"><i class="fa fa-circle-o"></i> Form Cabang</a></li>
+            <li><a href="/cabang/tambah"><i class="fa fa-circle-o"></i> Form Cabang</a></li>
             <li><a href="/karyawan"><i class="fa fa-circle-o"></i> Form Karyawan </a></li>
-            <li><a href="/manajer"><i class="fa fa-circle-o"></i> Form Manajer </a></li>
-            <li><a href="/produk"><i class="fa fa-circle-o"></i> Form Produk </a></li>
+            <li><a href="/manajer/tambah"><i class="fa fa-circle-o"></i> Form Manajer </a></li>
+            <li><a href="/produk/tambah"><i class="fa fa-circle-o"></i> Form Produk </a></li>
+            <li><a href="/kategori/tambah"><i class="fa fa-circle-o"></i> Form Kategori </a></li>
             <li><a href="/orderstok"><i class="fa fa-circle-o"></i> Form Order Stok </a></li>
           </ul>
         </li>
