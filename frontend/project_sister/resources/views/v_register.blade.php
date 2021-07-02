@@ -37,7 +37,7 @@
   <div class="login-box-body">
     <p class="login-box-msg">Register to make new account</p>
 
-    <form method="POST" action="{{ route('register') }}">
+    <form method="POST" action="#">
          @csrf
 
         <div class="form-group has-feedback">
@@ -114,7 +114,7 @@
     </div>
     <!- /.social-auth-links : not used -->
 
-    <a href="{{ route('login') }}" class="text-center">Log in</a>
+    <a href="#" class="text-center">Log in</a>
 
   </div>
   <!-- /.login-box-body -->

@@ -37,7 +37,7 @@
   <div class="login-box-body">
     <p class="login-box-msg">Log in to start new session</p>
 
-    <form method="POST" action="{{ route('login') }}">
+    <form method="POST" action="#">
         @csrf
       <div class="form-group has-feedback">
         <input type="useename" name="username" class="form-control" placeholder="Username">
@@ -57,6 +57,25 @@
             </span>
         @enderror
       </div>
+
+      <div class="col-sm-6">
+        <!-- radio -->
+        <div class="form-group">
+          <div class="custom-control custom-radio">
+          <input class="custom-control-input" type="radio" id="inputRoleUser" name="role" checked>
+          <label for="inputRoleKaryawan" class="custom-control-label">User</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input class="custom-control-input" type="radio" id="inputRoleManager" name="role">
+          <label for="inputRoleManager" class="custom-control-label">Manajer</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input class="custom-control-input" type="radio" id="inputRoleAdmin" name="role">
+          <label for="inputRoleManager" class="custom-control-label">Admin</label>
+        </div>
+      </div>
+    </div>
+
       <div class="row">
         <div class="col-xs-8">
           <div class="checkbox icheck">
@@ -83,7 +102,7 @@
     <!- /.social-auth-links : not used -->
 
     <a href="#">forgot password?</a><br>
-    <a href="{{ route('register') }}" class="text-center">Register</a>
+    <a href="#" class="text-center">Register</a>
 
   </div>
   <!-- /.login-box-body -->

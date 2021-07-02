@@ -32,8 +32,9 @@ route::view('/order','form/vf_order');
 route::view('/orderstok','form/vf_orderstok');
 route::view('/produk','form/vf_produk');
 
-//route::view('/login','v_login');
+route::view('/login','v_login');
+route::view('/register','v_register');
 
-Auth::routes();
+//Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
