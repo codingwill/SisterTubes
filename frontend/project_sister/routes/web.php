@@ -17,9 +17,6 @@ Route::get('/', function () {
     return view('v_home');
 });
 
-//route::view('/TabelProduk', 'tabel/v_tabelproduk');
-//Route::get('/produk', [ProdukController::class, 'getAll']);
-
 //Produk
 Route::get('/produk', 'ProdukController@getAll');
 Route::get('/produk/tambah', 'ProdukController@formData');
