@@ -38,7 +38,7 @@ Route::get('/cabang/tambah', 'CabangController@formData');
 Route::post('/cabang/tambah', 'CabangController@insertData');
 
 //Karyawan
-Route::view('/karyawan', 'form/vf_karyawan');
+Route::get('/karyawan', 'KaryawanController@getAll');
 Route::get('/karyawan/tambah', 'KaryawanController@formData');
 Route::post('/karyawan/tambah', 'KaryawanController@insertData');
 

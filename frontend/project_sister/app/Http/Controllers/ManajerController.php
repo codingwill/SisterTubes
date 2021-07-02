@@ -52,9 +52,10 @@ class ManajerController extends Controller
 
         $cekUsername = $manajer->usernameExist($data['username']);
         $cekEmail = $manajer->emailExist($data['email']);
+        $cekKtp = $manajer->ktpExist($data['ktp']);
     
         //cek keunikan username dan email
-        if ($cekUsername || $cekEmail) 
+        if ($cekUsername || $cekEmail || $cekKtp) 
         {
             $alert = [
                 'username' => 0,
@@ -62,6 +63,7 @@ class ManajerController extends Controller
             ];
             if ($cekUsername) $alert['username'] = 1;
             if ($cekEmail) $alert['email'] = 1;
+            if ($cekKtp) $alert['ktp'] = 1;
             return $this->formData($alert);
         }
         else

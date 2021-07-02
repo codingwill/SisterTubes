@@ -72,4 +72,13 @@ class ManajerModel extends Model
                 ->first();
         return $result;
     }
+    function ktpExist($ktp)
+    {
+        
+        $result = DB::table('manajer')
+                ->select('*')
+                ->where('ktp', '=', $ktp)
+                ->first();
+        return $result;
+    }
 }

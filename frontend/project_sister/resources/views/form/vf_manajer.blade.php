@@ -18,6 +18,9 @@
                 <h3>Gagal menambahkan manajer baru!</h3>
                 <hr>
                 <ul>
+                  @if ($alert != null && $alert['ktp'])
+                    <li>Nomor KTP sudah dipakai pengguna lain</li>
+                  @endif
                   @if ($alert != null && $alert['username'])
                     <li>Username sudah dipakai pengguna lain</li>
                   @endif

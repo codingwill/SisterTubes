@@ -14,7 +14,7 @@
       <li><a href="/produk"><i class="fa fa-circle-o"></i> Tabel Produk</a></li>
       <li><a href="/kategori"><i class="fa fa-circle-o"></i> Tabel Kategori</a></li>
       <li><a href="/manajer"><i class="fa fa-circle-o"></i> Tabel Manajer</a></li>
-      <li><a href="/TabelKaryawan"><i class="fa fa-circle-o"></i> Tabel Karyawan</a></li>
+      <li><a href="/karyawan"><i class="fa fa-circle-o"></i> Tabel Karyawan</a></li>
       <li><a href="/cabang"><i class="fa fa-circle-o"></i> Tabel Cabang</a></li>
     </ul>
   </li>
@@ -27,7 +27,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="/cabang/tambah"><i class="fa fa-circle-o"></i> Form Cabang</a></li>
-            <li><a href="/karyawan"><i class="fa fa-circle-o"></i> Form Karyawan </a></li>
+            <li><a href="/karyawan/tambah"><i class="fa fa-circle-o"></i> Form Karyawan </a></li>
             <li><a href="/manajer/tambah"><i class="fa fa-circle-o"></i> Form Manajer </a></li>
             <li><a href="/produk/tambah"><i class="fa fa-circle-o"></i> Form Produk </a></li>
             <li><a href="/kategori/tambah"><i class="fa fa-circle-o"></i> Form Kategori </a></li>

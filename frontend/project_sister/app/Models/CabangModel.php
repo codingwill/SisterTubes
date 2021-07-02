@@ -46,4 +46,13 @@ class CabangModel extends Model
         ]);
         */
     }
+    
+    function getCabangNama()
+    {
+        $data = DB::table('cabang')
+                ->select('id', 'nama')
+                ->get();
+        return $data;
+    }
+    
 }
