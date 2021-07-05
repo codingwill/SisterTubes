@@ -63,13 +63,3 @@ route::view('/manajer','form/vf_manajer');
 route::view('/order','form/vf_order');
 route::view('/orderstok','form/vf_orderstok');
 */
-
-
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
