@@ -20,7 +20,7 @@ class UserModel extends Model
                 values (?, ?, ?, ?, ?, ?)', [
                 $data['username'],
                 $data['email'], 
-                $data['password'], 
+                password_hash($data['password']), 
                 $data['password'], 
                 $data['role'],
                 $data['createdAt'],
