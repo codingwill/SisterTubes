@@ -4,36 +4,48 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\DB;
-use App\Models\UserModel;
 
-
-class KaryawanModel extends Model
+class OrderModel extends Model
 {
     use HasFactory;
 
-    protected $table = 'karyawan';
-    protected $primaryKey = 'ktp';
-    protected $keyType = 'string';
-    public $incrementing = 'false';
+    protected $table = 'order_stok';
+    protected $primaryKey = 'id';
 
     function getAll()
     {
-        $data = DB::table('karyawan')
-                ->join('users', 'users.id', '=', 'karyawan.user_id')
-                ->join('cabang', 'cabang.id', '=', 'karyawan.cabang_id')
-                ->select('karyawan.*', 'users.*', 'cabang.nama as cabang_nama', 'cabang.id as cabang_id')
-                ->orderBy('karyawan.nama')
+        $data = $this->join('karyawan', 'karyawan.ktp', '=', 'order_stok.karyawan_ktp')
+                ->join('admin', 'admin.ktp', '=', 'order_stok.admin_ktp')
+                ->join('produk', 'produk.id', '=', 'order_stok.produk_id')
+                ->select('order_stok.*', 'karyawan.nama as karyawan_nama', 'admin.nama as admin_nama', 'produk.nama as produk_nama')
+                ->orderBy('produk.nama')
+                ->get();
+        return $data;
+    }
+
+    function getDetail($id)
+    {
+        $data = $this->join('karyawan', 'karyawan.ktp', '=', 'order_stok.karyawan_ktp')
+                ->join('admin', 'admin.ktp', '=', 'order_stok.admin_ktp')
+                ->join('produk', 'produk.id', '=', 'order_stok.produk_id')
+                ->select('order_stok.*', 'karyawan.nama as karyawan_nama', 'admin.nama as admin_nama', 'produk.nama as produk_nama')
+                ->orderBy('produk.nama')
+                ->where('order_stok.id', '=', $id)
                 ->get();
         return $data;
     }
 
     function insert($data)
     {
-        $user = new UserModel();
         $result = [];
     
-        $result[1] = $user->addUser($data);
+        $result[1] = DB::insert('insert into users 
+            (id, email, password, role_id)
+            values (?, ?, ?, ?, ?, ?)', [
+            $data['username'],
+            $data['email'], 
+            $data['password'], 
+            1]);
 
         $result[0] = DB::insert('insert into karyawan 
             (ktp, user_id, cabang_id, nama, telp, alamat) 

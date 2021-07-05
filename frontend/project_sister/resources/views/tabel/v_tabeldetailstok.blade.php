@@ -27,16 +27,18 @@
               </tr>
             </thead>
             <tbody>
+              @foreach($rows as $row)
               <tr>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
+                <td>{{ $loop->index + 1 }}</td>
+                <td>{{ $row->karyawan_nama }}</td>
+                <td>{{ $row->admin_nama }}</td>
+                <td>{{ $row->produk_nama}}</td>
+                <td>{{ $row->tanggal }}</td>
+                <td>{{ $row->keterangan }}</td>
+                <td>{{ $row->jumlah_item }}</td>
+                <td>Rp {{ number_format($row->harga_item, 2, ',', '.') }}</td>
               </tr>
+              @endforeach
             </tbody>
             <tfoot>
               <tr>

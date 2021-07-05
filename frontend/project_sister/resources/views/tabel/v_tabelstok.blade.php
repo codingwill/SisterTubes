@@ -5,6 +5,27 @@
 @section('content')
 <h1>Ini Halaman Tabel Order Stok</h1>
 <section class="content">
+  
+  @if ($inputSuccess == 'success')
+    <div class="alert alert-success" role="alert">
+      <strong>Data berhasil dimasukkan!</strong>
+    </div>
+  @elseif ($inputSuccess == 'failed')
+    <div class="alert alert-success" role="alert">
+      <strong>Data gagal dimasukkan!</strong>
+    </div>
+  @endif
+
+  @if ($deleteSuccess == 'success')
+    <div class="alert alert-success" role="alert">
+      <strong>Data berhasil dihapus!</strong>
+    </div>
+  @elseif ($deleteSuccess == 'failed')
+    <div class="alert alert-success" role="alert">
+      <strong>Data gagal dihapus!</strong>
+    </div>
+  @endif
+
   <div class="row">
     <div class="col-xs-12">
       <div class="box">
@@ -25,14 +46,28 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td><button type="button" class="btn btn-block btn-info btn-sm">Detail</button></td>
-              </tr>
+              
+                @foreach($rows as $row)
+                  <tr>
+                    <td>{{ $loop->index + 1 }}</td>
+                    <td>{{ $row->karyawan_nama }}</td>
+                    <td>{{ $row->admin_nama }}</td>
+                    <td>{{ $row->produk_nama}}</td>
+                    <td>{{ $row->tanggal }}</td>
+                    <td>
+                      <a href="/order/{{$row->id}}">
+                        <button type="button" class="btn btn-block btn-info btn-sm">Detail</button>
+                      </a>
+                      <a href="/order/update/{{$row->id}}">
+                        <button type="button" class="btn btn-block btn-success btn-sm">Edit</button>
+                      </a>
+                      <a href="/order/delete/{{$row->id}}" onClick="return confirm('Apakah Anda yakin ingin menghapus data?')">
+                        <button type="button" class="btn btn-block btn-danger btn-sm">Delete</button>
+                      </a>
+                    </td>
+                  </tr>
+                @endforeach
+              
             </tbody>
             <tfoot>
               <tr>

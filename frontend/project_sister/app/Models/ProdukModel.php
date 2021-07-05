@@ -9,7 +9,8 @@ use Illuminate\Support\Facades\DB;
 class ProdukModel extends Model
 {
     use HasFactory;
-    public $table = "produk";
+    protected $table = "produk";
+    protected $primaryKey = 'id';
 
     function getAll()
     {

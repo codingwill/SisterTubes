@@ -23,17 +23,11 @@ class ManajerModel extends Model
 
     function insert($data)
     {
+        
+        $user = new UserModel();
         $result = [];
     
-        $result[1] = DB::insert('insert into users 
-            (id, email, password, role_id, created_at, updated_at)
-            values (?, ?, ?, ?, ?, ?)', [
-            $data['username'],
-            $data['email'], 
-            $data['password'], 
-            1, 
-            date('Y-m-d'),
-            date('Y-m-d')]);
+        $result[1] = $user->addUser($data);
 
         $result[0] = DB::insert('insert into manajer 
             (ktp, user_id, nama, telp, alamat) 

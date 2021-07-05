@@ -9,8 +9,8 @@
       </span>
     </a>
     <ul class="treeview-menu">
-      <li><a href="/TabelStok"><i class="fa fa-circle-o"></i> Tabel Order Stock</a></li>
-      <li><a href="/TabelDetailStok"><i class="fa fa-circle-o"></i> Tabel Detail Order Stock</a></li>
+      <li><a href="/order"><i class="fa fa-circle-o"></i> Tabel Order Stock</a></li>
+      <li><a href="/order/detail/{id}"><i class="fa fa-circle-o"></i> Tabel Detail Order Stock</a></li>
       <li><a href="/produk"><i class="fa fa-circle-o"></i> Tabel Produk</a></li>
       <li><a href="/kategori"><i class="fa fa-circle-o"></i> Tabel Kategori</a></li>
       <li><a href="/manajer"><i class="fa fa-circle-o"></i> Tabel Manajer</a></li>
@@ -31,7 +31,7 @@
             <li><a href="/manajer/tambah"><i class="fa fa-circle-o"></i> Form Manajer </a></li>
             <li><a href="/produk/tambah"><i class="fa fa-circle-o"></i> Form Produk </a></li>
             <li><a href="/kategori/tambah"><i class="fa fa-circle-o"></i> Form Kategori </a></li>
-            <li><a href="/orderstok"><i class="fa fa-circle-o"></i> Form Order Stok </a></li>
+            <li><a href="/order/tambah"><i class="fa fa-circle-o"></i> Form Order Stok </a></li>
           </ul>
         </li>
   <li><a href="/"><i class="fa fa-power-off"></i> <span>LOGOUT</span></a></li>

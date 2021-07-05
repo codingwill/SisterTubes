@@ -47,6 +47,9 @@ class ManajerController extends Controller
             'nama' => $request->input('nama'),
             'telp' => $request->input('telp'),
             'alamat' => $request->input('alamat'),
+            'role' => 1,
+            'createdAt' => Date('Y-m-d'),
+            'updatedAt' => Date('Y-m-d'),
             'password' => Str::random(10)
         ];
 

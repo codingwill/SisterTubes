@@ -40,8 +40,15 @@ Route::post('/cabang/tambah', 'CabangController@insertData');
 //Karyawan
 Route::get('/karyawan', 'KaryawanController@getAll');
 Route::get('/karyawan/tambah', 'KaryawanController@formData');
-Route::post('/karyawan/tambah', 'KaryawanController@insertData');
+Route::post('/karyawan/tambah', 'KaryawanController@addData');
 
+//Order Stok
+Route::get('/order', 'OrderController@getAll');
+Route::get('/order/detail/{id}', 'OrderController@getById');
+Route::get('/order/update/{id}', 'OrderController@updateById');
+Route::get('/order/delete/{id}', 'OrderController@deleteById');
+Route::get('/order/tambah', 'OrderController@formData');
+Route::post('/order/tambah', 'OrderController@addData');
 
 route::view('/TabelStok', 'tabel/v_tabelstok');
 route::view('/TabelDetailStok', 'tabel/v_tabeldetailstok');
@@ -58,3 +65,11 @@ route::view('/orderstok','form/vf_orderstok');
 */
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
