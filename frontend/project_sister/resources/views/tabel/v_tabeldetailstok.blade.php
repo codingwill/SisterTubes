@@ -3,7 +3,6 @@
 
 
 @section('content')
-<h1>Ini Halaman Tabel Detail Order Stok</h1>
 <section class="content">
   <div class="row">
     <div class="col-xs-12">
@@ -24,10 +23,12 @@
                 <th>Keterangan</th>
                 <th>Jumlah</th>
                 <th>Harga</th>
+                <th>Aksi</th>
               </tr>
             </thead>
             <tbody>
               <tr>
+<<<<<<< Updated upstream:frontend/project_sister/resources/views/tabel/v_tabeldetailstok.blade.php
                 <td>...</td>
                 <td>...</td>
                 <td>...</td>
@@ -36,20 +37,29 @@
                 <td>...</td>
                 <td>...</td>
                 <td>...</td>
+=======
+                <td>{{ $loop->index + 1 }}</td>
+                <td>{{ $row->karyawan_nama }}</td>
+                <td>{{ $row->admin_nama }}</td>
+                <td>{{ $row->produk_nama}}</td>
+                <td>{{ $row->tanggal }}</td>
+                <td>{{ $row->keterangan }}</td>
+                <td>{{ $row->jumlah_item }}</td>
+                <td>Rp {{ number_format($row->harga_item, 2, ',', '.') }}</td>
+                <td>
+                      <a href="">
+                        <button type="button" class="btn btn-block btn-info btn-sm">Detail</button>
+                      </a>
+                      <a href="">
+                        <button type="button" class="btn btn-block btn-success btn-sm">Edit</button>
+                      </a>
+                      <a href="" onClick="return confirm('Apakah Anda yakin ingin menghapus data?')">
+                        <button type="button" class="btn btn-block btn-danger btn-sm">Delete</button>
+                      </a>
+                  </td>
+>>>>>>> Stashed changes:resources/views/tabel/v_tabeldetailstok.blade.php
               </tr>
             </tbody>
-            <tfoot>
-              <tr>
-                <th>No</th>
-                <th>Karyawan</th>
-                <th>Admin</th>
-                <th>Produk</th>
-                <th>Tanggal</th>
-                <th>Keterangan</th>
-                <th>Jumlah</th>
-                <th>Harga</th>
-              </tr>
-            </tfoot>
           </table>
         </div>
         <!-- /.box-body -->

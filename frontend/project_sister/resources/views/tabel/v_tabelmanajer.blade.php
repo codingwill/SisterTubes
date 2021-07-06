@@ -3,7 +3,6 @@
 
 
 @section('content')
-<h1>Ini Halaman Tabel Manajer</h1>
 <section class="content">
   <div class="row">
     <div class="col-xs-12">
@@ -34,7 +33,11 @@
               </tr>
 =======
                 <th>Password Sementara</th>
+<<<<<<< Updated upstream:frontend/project_sister/resources/views/tabel/v_tabelmanajer.blade.php
                 <th>Cabang</th>
+=======
+                <th>Aksi</th>
+>>>>>>> Stashed changes:resources/views/tabel/v_tabelmanajer.blade.php
               </tr>
             </thead>
             <tbody>
@@ -58,11 +61,23 @@
                       </div>
                     @endif
                   </td>
+<<<<<<< Updated upstream:frontend/project_sister/resources/views/tabel/v_tabelmanajer.blade.php
                   <td>...</td>
+=======
+                  <td>
+                      <a href="">
+                        <button type="button" class="btn btn-block btn-success btn-sm">Edit</button>
+                      </a>
+                      <a href="" onClick="return confirm('Apakah Anda yakin ingin menghapus data?')">
+                        <button type="button" class="btn btn-block btn-danger btn-sm">Delete</button>
+                      </a>
+                  </td>
+>>>>>>> Stashed changes:resources/views/tabel/v_tabelmanajer.blade.php
                 </tr>
               @endforeach
 >>>>>>> Stashed changes
             </tbody>
+<<<<<<< Updated upstream:frontend/project_sister/resources/views/tabel/v_tabelmanajer.blade.php
             <tfoot>
               <tr>
                 <th>No</th>
@@ -77,6 +92,8 @@
 >>>>>>> Stashed changes
               </tr>
             </tfoot>
+=======
+>>>>>>> Stashed changes:resources/views/tabel/v_tabelmanajer.blade.php
           </table>
         </div>
         <!-- /.box-body -->
