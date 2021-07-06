@@ -1,9 +1,9 @@
 @extends('layout.v_template')
-@section('title','Tabel Karyawan')
+@section('title','Tabel Manajer')
 
 
 @section('content')
-<h1>Ini Halaman Tabel Karyawan</h1>
+<h1>Ini Halaman Tabel Manajer</h1>
 <section class="content">
   @if ($inputSuccess == 'success')
     <div class="alert alert-success" role="alert">
@@ -18,7 +18,7 @@
     <div class="col-xs-12">
       <div class="box">
         <div class="box-header">
-          <h3 class="box-title">Tabel Karyawan</h3>
+          <h3 class="box-title">Tabel Manajer</h3>
         </div>
         <!-- /.box-header -->
         <div class="box-body">
@@ -26,25 +26,20 @@
             <thead>
               <tr>
                 <th>No</th>
-                <th>Cabang</th>
                 <th>Username</th>
-                <th>Nama Karyawan</th>
-                <th>Nomor KTP</th>
+                <th>Nama Manajer</th>
                 <th>Email</th>
                 <th>No. Telepon</th>
                 <th>Alamat</th>
                 <th>Password Sementara</th>
-                <th>Aksi</th>
               </tr>
             </thead>
             <tbody>
               @foreach($rows as $row)
                 <tr>
                   <td>{{ $loop->index + 1 }}</td>
-                  <td>{{ $row->cabang_nama}}
                   <td>{{ $row->user_id }}</td>
                   <td>{{ $row->nama }}</td>
-                  <td>{{ $row->ktp }}</td>
                   <td>{{ $row->email }} </td>
                   <td>{{ $row->telp }}</td>
                   <td>{{ $row->alamat }}</td>
@@ -60,27 +55,14 @@
                       </div>
                     @endif
                   </td>
-                  <td>
-                      <a href="">
-                        <button type="button" class="btn btn-block btn-success btn-sm">Edit</button>
-                      </a>
-                      <a href="" onClick="return confirm('Apakah Anda yakin ingin menghapus data?')">
-                        <button type="button" class="btn btn-block btn-danger btn-sm">Delete</button>
-                      </a>
-                  </td>
-                </tr>
-              @endforeach
-            </tbody>
                 </tr>
               @endforeach
             </tbody>
             <tfoot>
               <tr>
                 <th>No</th>
-                <th>Cabang</th>
                 <th>Username</th>
-                <th>Nama Karyawan</th>
-                <th>Nomor KTP</th>
+                <th>Nama Manajer</th>
                 <th>Email</th>
                 <th>No. Telepon</th>
                 <th>Alamat</th>

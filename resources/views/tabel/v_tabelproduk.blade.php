@@ -1,10 +1,9 @@
 @extends('layout.v_template')
-@section('title','Tabel Kategori')
+@section('title','Tabel Produk')
 
 
 @section('content')
-<h1>Ini Halaman Tabel Kategori</h1>
->>>>>>> main
+<h1>Ini Halaman Tabel Produk</h1>
 <section class="content">
   @if ($inputSuccess == 'success')
     <div class="alert alert-success" role="alert">
@@ -19,31 +18,28 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Kategori</h3>
+              <h3 class="box-title">Produk</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
               <table id="example2" class="table table-bordered table-hover">
                 <thead>
                 <tr>
-                  <th width="50px">No</th>
+                  <th>No</th>
                   <th>Kategori</th>
-                  <th>Aksi</th>
+                  <th>Nama Produk</th>
+                  <th>Stok</th>
+                  <th>Harga</th>
                 </tr>
                 </thead>
                 <tbody>
                   @foreach($rows as $row)
                     <tr>
-                      <td>{{ $loop->index + 1 }}</td>
+                      <a href="produk"><td>{{ $loop->index + 1 }}</td></a>
+                      <td>{{ $row->kategoriNama }}</td>
                       <td>{{ $row->nama }}</td>
-                      <td>
-                      <a href="">
-                        <button type="button" class="btn btn-block btn-success btn-sm">Edit</button>
-                      </a>
-                      <a href="" onClick="return confirm('Apakah Anda yakin ingin menghapus data?')">
-                        <button type="button" class="btn btn-block btn-danger btn-sm">Delete</button>
-                      </a>
-                  </td>
+                      <td>{{ $row->stok }} </td>
+                      <td>Rp {{ number_format($row->harga, 2, ',', '.') }}</td>
                     </tr>
                   @endforeach
                 <!--
@@ -59,6 +55,9 @@
                 <tr>
                   <th>No</th>
                   <th>Kategori</th>
+                  <th>Nama Produk</th>
+                  <th>Stok</th>
+                  <th>Harga</th>
                 </tr>
                 </tfoot>
               </table>
@@ -67,7 +66,40 @@
           </div>
           <!-- /.box -->
 
-          
+          <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Tabel Produk</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Nama</th>
+                  <th>Stock</th>
+                  <th>Harga</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>...</td>
+                  <td>...</td>
+                  <td>...</td>
+                  <td>...</td>
+                </tr>
+                <tfoot>
+                <tr>
+                  <th>No</th>
+                  <th>Nama</th>
+                  <th>Stock</th>
+                  <th>Harga</th>
+                </tr>
+                </tfoot>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
           <!-- /.box -->
         </div>
         <!-- /.col -->

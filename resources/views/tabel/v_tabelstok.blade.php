@@ -3,6 +3,7 @@
 
 
 @section('content')
+<h1>Ini Halaman Tabel Order Stok</h1>
 <section class="content">
   
   @if ($inputSuccess == 'success')
@@ -68,6 +69,16 @@
                 @endforeach
               
             </tbody>
+            <tfoot>
+              <tr>
+                <th>No</th>
+                <th>Karyawan</th>
+                <th>Admin</th>
+                <th>Produk</th>
+                <th>Tanggal</th>
+                <th>Aksi</th>
+              </tr>
+            </tfoot>
           </table>
         </div>
         <!-- /.box-body -->
