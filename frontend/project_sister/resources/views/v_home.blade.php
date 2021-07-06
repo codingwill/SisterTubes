@@ -3,5 +3,10 @@
 
 
 @section('content')
-<h1>Ini Halaman HOME</h1>
+<!-- Begin Page Content -->
+<div class="container-fluid">
+    <br>
+    <h2 class="text-center">Selamat Datang di Sistem Informasi GadgetShop</h2>
+</div>
+<!-- End of Main Content -->
 @endsection

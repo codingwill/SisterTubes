@@ -1,9 +1,10 @@
 @extends('layout.v_template')
-@section('title','Tabel Produk')
+@section('title','Tabel Kategori')
 
 
 @section('content')
 <h1>Ini Halaman Tabel Kategori</h1>
+>>>>>>> main
 <section class="content">
   @if ($inputSuccess == 'success')
     <div class="alert alert-success" role="alert">
@@ -27,6 +28,7 @@
                 <tr>
                   <th width="50px">No</th>
                   <th>Kategori</th>
+                  <th>Aksi</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -34,6 +36,14 @@
                     <tr>
                       <td>{{ $loop->index + 1 }}</td>
                       <td>{{ $row->nama }}</td>
+                      <td>
+                      <a href="">
+                        <button type="button" class="btn btn-block btn-success btn-sm">Edit</button>
+                      </a>
+                      <a href="" onClick="return confirm('Apakah Anda yakin ingin menghapus data?')">
+                        <button type="button" class="btn btn-block btn-danger btn-sm">Delete</button>
+                      </a>
+                  </td>
                     </tr>
                   @endforeach
                 <!--

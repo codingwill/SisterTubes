@@ -3,7 +3,7 @@
 
 
 @section('content')
-<h1>Ini Halaman Tabel Cabang</h1>
+
 <section class="content">
   <div class="row">
     <div class="col-xs-12">
@@ -21,6 +21,7 @@
                 <th>Nama Cabang</th>
                 <th>No. Telepon</th>
                 <th>Alamat</th>
+<<<<<<< Updated upstream:frontend/project_sister/resources/views/tabel/v_tabelcabang.blade.php
               </tr>
             </thead>
             <tbody>
@@ -41,6 +42,33 @@
                 <th>Alamat</th>
               </tr>
             </tfoot>
+=======
+                <th>Nama Manager</th>
+                <th>Nomor KTP Manager</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody>
+              @foreach($rows as $row)
+                <tr>
+                  <td>{{ $loop->index + 1 }}</td>
+                  <td>{{ $row->cabangNama }}</td>
+                  <td>{{ $row->cabangTelp }} </td>
+                  <td>{{ $row->cabangAlamat }}</td>
+                  <td>{{ $row->manajerNama }}</td>
+                  <td>{{ $row->manajerKtp }}</td>
+                  <td>
+                      <a href="">
+                        <button type="button" class="btn btn-block btn-success btn-sm">Edit</button>
+                      </a>
+                      <a href="" onClick="return confirm('Apakah Anda yakin ingin menghapus data?')">
+                        <button type="button" class="btn btn-block btn-danger btn-sm">Delete</button>
+                      </a>
+                  </td>
+                </tr>
+              @endforeach
+            </tbody>
+>>>>>>> Stashed changes:resources/views/tabel/v_tabelcabang.blade.php
           </table>
         </div>
         <!-- /.box-body -->
