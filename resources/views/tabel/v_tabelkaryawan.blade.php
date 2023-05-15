@@ -34,7 +34,6 @@
                 <th>No. Telepon</th>
                 <th>Alamat</th>
                 <th>Password Sementara</th>
-                <th>Aksi</th>
               </tr>
             </thead>
             <tbody>
@@ -56,21 +55,10 @@
                     @else
                       <div class="alert alert-danger" role="alert">
                         Password belum diubah oleh pengguna<br>
-                        PASSWORD: <strong>{{$row->password}}</strong>
+                        PASSWORD: <strong>{{$row->init_password}}</strong>
                       </div>
                     @endif
                   </td>
-                  <td>
-                      <a href="">
-                        <button type="button" class="btn btn-block btn-success btn-sm">Edit</button>
-                      </a>
-                      <a href="" onClick="return confirm('Apakah Anda yakin ingin menghapus data?')">
-                        <button type="button" class="btn btn-block btn-danger btn-sm">Delete</button>
-                      </a>
-                  </td>
-                </tr>
-              @endforeach
-            </tbody>
                 </tr>
               @endforeach
             </tbody>

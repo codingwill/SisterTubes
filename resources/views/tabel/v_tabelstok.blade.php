@@ -55,7 +55,7 @@
                     <td>{{ $row->produk_nama}}</td>
                     <td>{{ $row->tanggal }}</td>
                     <td>
-                      <a href="/order/{{$row->id}}">
+                      <a href="/order/detail/{{$row->id}}">
                         <button type="button" class="btn btn-block btn-info btn-sm">Detail</button>
                       </a>
                       <a href="/order/update/{{$row->id}}">

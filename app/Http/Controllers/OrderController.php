@@ -21,6 +21,24 @@ class OrderController extends Controller
             'inputSuccess' => $inputSuccess,
             'deleteSuccess' => '']);
     }
+    
+    function getByIdAPI(Request $request, $id)
+    {
+        $order = new OrderModel();
+        $rows = $order->getDetail($id)->first();
+        return [
+            'id' => $rows->id,
+            'karyawanKtp' => $rows->karyawan_nama,
+            'adminKtp' => $rows->admin_nama,
+            'produkId' => $rows->produk_nama,
+            'tanggal' => $rows->tanggal,
+            'keterangan' => $rows->keterangan,
+            'jumlahItem' => $rows->jumlah_item,
+            'hargaItem' => $rows->harga_item,
+            'updatedAt' => $rows->updated_at,
+            'createdAt' => $rows->created_at,
+        ];
+    }
 
     function getById(Request $request, $id)
     {
@@ -104,7 +122,6 @@ class OrderController extends Controller
             'keterangan' => $request->input('keterangan'),
             'jumlahItem' => $request->input('jumlahItem'),
             'hargaItem' => $request->input('hargaItem'),
-            
         ];
     
         //model order

@@ -3,6 +3,7 @@
 
 
 <?php $__env->startSection('content'); ?>
+<h1>Ini Halaman Tabel Order Stok</h1>
 <section class="content">
   
   <?php if($inputSuccess == 'success'): ?>
@@ -54,7 +55,7 @@
                     <td><?php echo e($row->produk_nama); ?></td>
                     <td><?php echo e($row->tanggal); ?></td>
                     <td>
-                      <a href="/order/<?php echo e($row->id); ?>">
+                      <a href="/order/detail/<?php echo e($row->id); ?>">
                         <button type="button" class="btn btn-block btn-info btn-sm">Detail</button>
                       </a>
                       <a href="/order/update/<?php echo e($row->id); ?>">
@@ -68,6 +69,16 @@
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
               
             </tbody>
+            <tfoot>
+              <tr>
+                <th>No</th>
+                <th>Karyawan</th>
+                <th>Admin</th>
+                <th>Produk</th>
+                <th>Tanggal</th>
+                <th>Aksi</th>
+              </tr>
+            </tfoot>
           </table>
         </div>
         <!-- /.box-body -->

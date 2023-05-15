@@ -62,7 +62,8 @@ class ManajerController extends Controller
         {
             $alert = [
                 'username' => 0,
-                'email' => 0
+                'email' => 0,
+                'ktp' => 0
             ];
             if ($cekUsername) $alert['username'] = 1;
             if ($cekEmail) $alert['email'] = 1;

@@ -3,6 +3,8 @@
 
 
 <?php $__env->startSection('content'); ?>
+<h1>Ini Halaman Tabel Kategori</h1>
+>>>>>>> main
 <section class="content">
   <?php if($inputSuccess == 'success'): ?>
     <div class="alert alert-success" role="alert">
@@ -53,6 +55,12 @@
                   <td>...</td>
                 </tr>
                 -->
+                <tfoot>
+                <tr>
+                  <th>No</th>
+                  <th>Kategori</th>
+                </tr>
+                </tfoot>
               </table>
             </div>
             <!-- /.box-body -->

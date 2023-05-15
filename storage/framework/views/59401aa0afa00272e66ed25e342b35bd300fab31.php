@@ -3,6 +3,7 @@
 
 
 <?php $__env->startSection('content'); ?>
+<h1>Ini Halaman Tabel Produk</h1>
 <section class="content">
   <?php if($inputSuccess == 'success'): ?>
     <div class="alert alert-success" role="alert">
@@ -21,7 +22,7 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-              <table id="example2" class="table table-bordered table-hover">
+              <table id="example2" class="table table-bordered ">
                 <thead>
                 <tr>
                   <th>No</th>
@@ -29,7 +30,6 @@
                   <th>Nama Produk</th>
                   <th>Stok</th>
                   <th>Harga</th>
-                  <th>Aksi</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -40,14 +40,6 @@
                       <td><?php echo e($row->nama); ?></td>
                       <td><?php echo e($row->stok); ?> </td>
                       <td>Rp <?php echo e(number_format($row->harga, 2, ',', '.')); ?></td>
-                      <td>
-                      <a href="">
-                        <button type="button" class="btn btn-block btn-success btn-sm">Edit</button>
-                      </a>
-                      <a href="" onClick="return confirm('Apakah Anda yakin ingin menghapus data?')">
-                        <button type="button" class="btn btn-block btn-danger btn-sm">Delete</button>
-                      </a>
-                      </td>
                     </tr>
                   <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 <!--
@@ -59,13 +51,55 @@
                   <td>...</td>
                 </tr>
                 -->
+                <tfoot>
+                <tr>
+                  <th>No</th>
+                  <th>Kategori</th>
+                  <th>Nama Produk</th>
+                  <th>Stok</th>
+                  <th>Harga</th>
+                </tr>
+                </tfoot>
               </table>
             </div>
             <!-- /.box-body -->
           </div>
           <!-- /.box -->
 
-          
+          <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Tabel Produk</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Nama</th>
+                  <th>Stock</th>
+                  <th>Harga</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>...</td>
+                  <td>...</td>
+                  <td>...</td>
+                  <td>...</td>
+                </tr>
+                <tfoot>
+                <tr>
+                  <th>No</th>
+                  <th>Nama</th>
+                  <th>Stock</th>
+                  <th>Harga</th>
+                </tr>
+                </tfoot>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
           <!-- /.box -->
         </div>
         <!-- /.col -->

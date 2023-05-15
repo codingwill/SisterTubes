@@ -71,7 +71,8 @@ class KaryawanController extends Controller
         {
             $alert = [
                 'username' => 0,
-                'email' => 0
+                'email' => 0,
+                'ktp' => 0
             ];
             if ($cekUsername) $alert['username'] = 1;
             if ($cekEmail) $alert['email'] = 1;
@@ -83,7 +84,8 @@ class KaryawanController extends Controller
             //model users
             $user->id = $data['username'];
             $user->email = $data['email'];
-            $user->password = $data['password'];
+            $user->password = password_hash($data['password'], PASSWORD_DEFAULT);
+            $user->init_password = $data['password'];
             $user->role_id = 1;
             $user->created_at = date('Y-m-d');
             $user->updated_at = date('Y-m-d');
@@ -138,7 +140,8 @@ class KaryawanController extends Controller
         {
             $alert = [
                 'username' => 0,
-                'email' => 0
+                'email' => 0,
+                'ktp' => 0
             ];
             if ($cekUsername) $alert['username'] = 1;
             if ($cekEmail) $alert['email'] = 1;

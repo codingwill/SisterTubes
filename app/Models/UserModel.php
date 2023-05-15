@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class UserModel extends Model
 {
@@ -20,7 +21,7 @@ class UserModel extends Model
                 values (?, ?, ?, ?, ?, ?)', [
                 $data['username'],
                 $data['email'], 
-                password_hash($data['password']), 
+                password_hash($data['password'], PASSWORD_DEFAULT), 
                 $data['password'], 
                 $data['role'],
                 $data['createdAt'],

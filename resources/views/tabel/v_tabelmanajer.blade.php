@@ -51,7 +51,7 @@
                     @else
                       <div class="alert alert-danger" role="alert">
                         Password belum diubah oleh pengguna<br>
-                        PASSWORD: <strong>{{$row->password}}</strong>
+                        PASSWORD: <strong>{{$row->init_password}}</strong>
                       </div>
                     @endif
                   </td>

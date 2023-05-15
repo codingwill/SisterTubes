@@ -3,6 +3,7 @@
 
 
 <?php $__env->startSection('content'); ?>
+<h1>Ini Halaman Tabel Manajer</h1>
 <section class="content">
   <?php if($inputSuccess == 'success'): ?>
     <div class="alert alert-success" role="alert">
@@ -31,7 +32,6 @@
                 <th>No. Telepon</th>
                 <th>Alamat</th>
                 <th>Password Sementara</th>
-                <th>Aksi</th>
               </tr>
             </thead>
             <tbody>
@@ -51,21 +51,24 @@
                     <?php else: ?>
                       <div class="alert alert-danger" role="alert">
                         Password belum diubah oleh pengguna<br>
-                        PASSWORD: <strong><?php echo e($row->password); ?></strong>
+                        PASSWORD: <strong><?php echo e($row->init_password); ?></strong>
                       </div>
                     <?php endif; ?>
-                  </td>
-                  <td>
-                      <a href="">
-                        <button type="button" class="btn btn-block btn-success btn-sm">Edit</button>
-                      </a>
-                      <a href="" onClick="return confirm('Apakah Anda yakin ingin menghapus data?')">
-                        <button type="button" class="btn btn-block btn-danger btn-sm">Delete</button>
-                      </a>
                   </td>
                 </tr>
               <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </tbody>
+            <tfoot>
+              <tr>
+                <th>No</th>
+                <th>Username</th>
+                <th>Nama Manajer</th>
+                <th>Email</th>
+                <th>No. Telepon</th>
+                <th>Alamat</th>
+                <th>Password Sementara</th>
+              </tr>
+            </tfoot>
           </table>
         </div>
         <!-- /.box-body -->
